@@ -1,3 +1,8 @@
 <h1>Olá, handlebars!</h1>
-<p>Nome do usuario é {{user.name}} {{user.surname}}, e ele tem {{user.age}} anos</p>
-<h2>{{palavra}}</h2>
+<p>Nome do usuário é {{user.name}} {{user.surname}}, e ele tem {{user.age}} anos</p>
+
+{{#if auth}}
+  <p style="color: green;">
+    ✅ Você está autenticado, <a href="/dashboard">clique aqui</a> para acessar a área de membros!
+  </p>
+{{/if}}
