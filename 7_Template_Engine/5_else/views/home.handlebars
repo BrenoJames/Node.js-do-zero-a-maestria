@@ -1,0 +1,19 @@
+<h1>Olá, handlebars!</h1>
+
+{{#if approved}}
+  <p>Parabéns!!!, seu cadastro foi aprovado!!!</p>
+{{else}}
+<p> O seu cadastro necessita de aprovação para o acesso total do sistema!</p>
+{{/if}}
+
+<p>Nome do usuário é {{user.name}} ({{user.surname}}), e ele tem {{user.age}} anos</p>
+
+{{#if auth}}
+  <p><strong>Valor de auth:</strong> {{auth}}</p> <!-- 👈 Debug visível -->
+
+  {{#if auth}}
+    <p style="color: green;">
+      ✅ Você está autenticado, <a href="/dashboard">clique aqui</a> para acessar a área de membros!
+    </p>
+  {{/if}}
+{{/if}}
